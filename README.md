@@ -14,6 +14,7 @@ pip install -e .[audio]
 
 1.  **Obtain your token:**
     *   ⚠️ **DO NOT SHARE YOUR TOKEN!** It is required to send requests from your account.
+    *   Open link https://character.ai/chat/2WPyJRflV_4nTx6_-tuNrhkiiqhDyOsn9O25BR1sDO8
     *   Open **Developer Tools** in your browser (usually F12).
     *   Go to the **Network** tab.
     *   Refresh the page or send a message to any character.
