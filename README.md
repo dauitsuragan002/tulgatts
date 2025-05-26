@@ -1,5 +1,5 @@
 # TulgaTTS
-**TulgaTTS - A library for synthesizing text-to-speech (TTS) with various popular voices in Kazakhstan.**
+**TulgaTTS is an AI-based text-to-speech (TTS) library that generates speech using various voices popular in Kazakhstan. It leverages Character AI technology to synthesize natural-sounding speech from text.**
 
 ## Installation
 
@@ -31,9 +31,7 @@ pip install -e .[audio]
 2.  Use the library.
 
 ## Usage Examples
-
 You can use the library in several ways. For simple scripts, use the synchronous method; for async applications, use the `async`/`await` method.
-
 ### 1. The simplest usage
 
 ```python
@@ -56,19 +54,15 @@ from dotenv import load_dotenv
 # Load token from .env
 load_dotenv()
 api_token = os.getenv("CHARACTER_AI_TOKEN")
-
 def sync_say_usage():
     if not api_token:
         print("❌ No token!")
         return
-
     try:
         tts_client = TulgaTTS(api_token=api_token, voice='Tokaev')
         print(f"✅ Client ready with voice '{tts_client.voice}'.")
-
         tts_client.say("Synchronous example.", output_file="sync_example.mp3")
         print("🎧 File ready: sync_example.mp3")
-
     except Exception as e:
         print(f"⚠️ Error occurred: {e}")
 
@@ -79,7 +73,6 @@ if __name__ == "__main__":
 ```
 
 ### 3. Asynchronous usage
-
 ```python
 import os, asyncio
 from tulgatts import TulgaTTS
@@ -91,7 +84,6 @@ api_token = os.getenv("CHARACTER_AI_TOKEN")
 
 async def advanced_async_say():
     if not api_token: return print("No token!")
-    
     try:
         tts_client = TulgaTTS(api_token=api_token)
         print(f"Client ready with voice '{tts_client.voice}'.")
@@ -105,9 +97,7 @@ if __name__ == "__main__":
 ```
 
 ## Available Voices
-
 The library comes with the following pre-configured voices:
-
 *   Nursultan Nazarbaev
 *   Tokaev
 *   Pavel Durov
@@ -121,9 +111,7 @@ The library comes with the following pre-configured voices:
 *   Tony Stark
 
 Note: Sometimes TulgaTTS may not synthesize your expected text. This issue is being worked on.
-
 Special thanks to [PyCharacterAI](https://github.com/Xtr4F/PyCharacterAI) for enabling TTS with Character AI voices.
-
 ## Authors
 - David Suragan (TulgaTTS)
 - Gemini AI
