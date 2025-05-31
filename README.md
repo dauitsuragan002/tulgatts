@@ -27,6 +27,19 @@ pip install -e .[audio]
         ```
     *   Copy only the token part (after `Token `).
     *   Set the `CHARACTER_AI_TOKEN` environment variable or create a `.env` file in the project root and add `CHARACTER_AI_TOKEN=your_copied_token`.
+    **Authorization easy (use for mobile) script**  
+    If you want to easily obtain your CharacterAI token using your email, you can use the provided `auth.py` script:
+
+    ```sh
+    pip install characterai
+    python auth.py
+    ```
+    - Enter your email address.
+    - Open the sign-in link sent to your email (you can do this on your mobile).
+    - Paste the link back into the script prompt.
+    - The script will save your token to `user_token.txt` in the format required for `.env`.
+
+    This makes it easy to get your token without using browser developer tools.
 
 2.  Use the library.
 
@@ -111,10 +124,11 @@ The library comes with the following pre-configured voices:
 *   Tony Stark
 
 Note: Sometimes TulgaTTS may not synthesize your expected text. This issue is being worked on.
-Special thanks to [PyCharacterAI](https://github.com/Xtr4F/PyCharacterAI) for enabling TTS with Character AI voices.
+Special thanks to [PyCharacterAI](https://github.com/Xtr4F/PyCharacterAI) for enabling TTS with Character AI voices. And special thanks to [CharacterAI](https://github.com/kramcat/CharacterAI) for the authentication script.
+
 ## Authors
 - David Suragan (TulgaTTS)
 - Gemini AI
 
 ## License
-MIT 
+MIT
